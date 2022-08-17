@@ -30,46 +30,46 @@
     <ProjectGuid>{6534D221-34DF-404A-AFCD-6DEC9BBC9798}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>bullet</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseVS2013|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseVS2013|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -106,8 +106,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <TargetExt>.hdll</TargetExt>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);../../hashlink/src;src/bullet/src</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64;../../hashlink/x64/$(Configuration);src/bullet/bin</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);../../hashlink/src;src/bullet/src;C:\HaxeToolkit\hl\include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64;../../hashlink/x64/$(Configuration);src/bullet/bin;C:\HaxeToolkit\hl</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -124,8 +124,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <TargetExt>.hdll</TargetExt>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);../../hashlink/src;src/bullet/src</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64;../../hashlink/x64/$(Configuration);src/bullet/bin</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\HaxeToolkit\hl\include;src/bullet/src</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64;../../hashlink/x64/$(Configuration);src/bullet/bin;C:\HaxeToolkit\hl</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseVS2013|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -306,12 +306,14 @@
     <ClCompile Include="src\bullet\src\BulletCollision\CollisionShapes\btCylinderShape.cpp" />
     <ClCompile Include="src\bullet\src\BulletCollision\CollisionShapes\btEmptyShape.cpp" />
     <ClCompile Include="src\bullet\src\BulletCollision\CollisionShapes\btHeightfieldTerrainShape.cpp" />
+    <ClCompile Include="src\bullet\src\BulletCollision\CollisionShapes\btMiniSDF.cpp" />
     <ClCompile Include="src\bullet\src\BulletCollision\CollisionShapes\btMinkowskiSumShape.cpp" />
     <ClCompile Include="src\bullet\src\BulletCollision\CollisionShapes\btMultimaterialTriangleMeshShape.cpp" />
     <ClCompile Include="src\bullet\src\BulletCollision\CollisionShapes\btMultiSphereShape.cpp" />
     <ClCompile Include="src\bullet\src\BulletCollision\CollisionShapes\btOptimizedBvh.cpp" />
     <ClCompile Include="src\bullet\src\BulletCollision\CollisionShapes\btPolyhedralConvexShape.cpp" />
     <ClCompile Include="src\bullet\src\BulletCollision\CollisionShapes\btScaledBvhTriangleMeshShape.cpp" />
+    <ClCompile Include="src\bullet\src\BulletCollision\CollisionShapes\btSdfCollisionShape.cpp" />
     <ClCompile Include="src\bullet\src\BulletCollision\CollisionShapes\btShapeHull.cpp" />
     <ClCompile Include="src\bullet\src\BulletCollision\CollisionShapes\btSphereShape.cpp" />
     <ClCompile Include="src\bullet\src\BulletCollision\CollisionShapes\btStaticPlaneShape.cpp" />
@@ -348,6 +350,7 @@
     <ClCompile Include="src\bullet\src\BulletCollision\NarrowPhaseCollision\btSubSimplexConvexCast.cpp" />
     <ClCompile Include="src\bullet\src\BulletCollision\NarrowPhaseCollision\btVoronoiSimplexSolver.cpp" />
     <ClCompile Include="src\bullet\src\BulletDynamics\Character\btKinematicCharacterController.cpp" />
+    <ClCompile Include="src\bullet\src\BulletDynamics\ConstraintSolver\btBatchedConstraints.cpp" />
     <ClCompile Include="src\bullet\src\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp" />
     <ClCompile Include="src\bullet\src\BulletDynamics\ConstraintSolver\btContactConstraint.cpp" />
     <ClCompile Include="src\bullet\src\BulletDynamics\ConstraintSolver\btFixedConstraint.cpp" />
@@ -360,6 +363,7 @@
     <ClCompile Include="src\bullet\src\BulletDynamics\ConstraintSolver\btNNCGConstraintSolver.cpp" />
     <ClCompile Include="src\bullet\src\BulletDynamics\ConstraintSolver\btPoint2PointConstraint.cpp" />
     <ClCompile Include="src\bullet\src\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.cpp" />
+    <ClCompile Include="src\bullet\src\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolverMt.cpp" />
     <ClCompile Include="src\bullet\src\BulletDynamics\ConstraintSolver\btSliderConstraint.cpp" />
     <ClCompile Include="src\bullet\src\BulletDynamics\ConstraintSolver\btSolve2LinearConstraint.cpp" />
     <ClCompile Include="src\bullet\src\BulletDynamics\ConstraintSolver\btTypedConstraint.cpp" />
@@ -393,6 +397,7 @@
     <ClCompile Include="src\bullet\src\BulletSoftBody\btSoftRigidCollisionAlgorithm.cpp" />
     <ClCompile Include="src\bullet\src\BulletSoftBody\btSoftRigidDynamicsWorld.cpp" />
     <ClCompile Include="src\bullet\src\BulletSoftBody\btSoftSoftCollisionAlgorithm.cpp" />
+    <ClCompile Include="src\bullet\src\BulletSoftBody\poly34.cpp" />
     <ClCompile Include="src\bullet\src\LinearMath\btAlignedAllocator.cpp" />
     <ClCompile Include="src\bullet\src\LinearMath\btConvexHull.cpp" />
     <ClCompile Include="src\bullet\src\LinearMath\btConvexHullComputer.cpp" />
@@ -491,12 +496,14 @@
     <ClInclude Include="src\bullet\src\BulletCollision\CollisionShapes\btEmptyShape.h" />
     <ClInclude Include="src\bullet\src\BulletCollision\CollisionShapes\btHeightfieldTerrainShape.h" />
     <ClInclude Include="src\bullet\src\BulletCollision\CollisionShapes\btMaterial.h" />
+    <ClInclude Include="src\bullet\src\BulletCollision\CollisionShapes\btMiniSDF.h" />
     <ClInclude Include="src\bullet\src\BulletCollision\CollisionShapes\btMinkowskiSumShape.h" />
     <ClInclude Include="src\bullet\src\BulletCollision\CollisionShapes\btMultimaterialTriangleMeshShape.h" />
     <ClInclude Include="src\bullet\src\BulletCollision\CollisionShapes\btMultiSphereShape.h" />
     <ClInclude Include="src\bullet\src\BulletCollision\CollisionShapes\btOptimizedBvh.h" />
     <ClInclude Include="src\bullet\src\BulletCollision\CollisionShapes\btPolyhedralConvexShape.h" />
     <ClInclude Include="src\bullet\src\BulletCollision\CollisionShapes\btScaledBvhTriangleMeshShape.h" />
+    <ClInclude Include="src\bullet\src\BulletCollision\CollisionShapes\btSdfCollisionShape.h" />
     <ClInclude Include="src\bullet\src\BulletCollision\CollisionShapes\btShapeHull.h" />
     <ClInclude Include="src\bullet\src\BulletCollision\CollisionShapes\btSphereShape.h" />
     <ClInclude Include="src\bullet\src\BulletCollision\CollisionShapes\btStaticPlaneShape.h" />
@@ -565,6 +572,7 @@
     <ClInclude Include="src\bullet\src\BulletCollision\NarrowPhaseCollision\btVoronoiSimplexSolver.h" />
     <ClInclude Include="src\bullet\src\BulletDynamics\Character\btCharacterControllerInterface.h" />
     <ClInclude Include="src\bullet\src\BulletDynamics\Character\btKinematicCharacterController.h" />
+    <ClInclude Include="src\bullet\src\BulletDynamics\ConstraintSolver\btBatchedConstraints.h" />
     <ClInclude Include="src\bullet\src\BulletDynamics\ConstraintSolver\btConeTwistConstraint.h" />
     <ClInclude Include="src\bullet\src\BulletDynamics\ConstraintSolver\btConstraintSolver.h" />
     <ClInclude Include="src\bullet\src\BulletDynamics\ConstraintSolver\btContactConstraint.h" />
@@ -580,6 +588,7 @@
     <ClInclude Include="src\bullet\src\BulletDynamics\ConstraintSolver\btNNCGConstraintSolver.h" />
     <ClInclude Include="src\bullet\src\BulletDynamics\ConstraintSolver\btPoint2PointConstraint.h" />
     <ClInclude Include="src\bullet\src\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.h" />
+    <ClInclude Include="src\bullet\src\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolverMt.h" />
     <ClInclude Include="src\bullet\src\BulletDynamics\ConstraintSolver\btSliderConstraint.h" />
     <ClInclude Include="src\bullet\src\BulletDynamics\ConstraintSolver\btSolve2LinearConstraint.h" />
     <ClInclude Include="src\bullet\src\BulletDynamics\ConstraintSolver\btSolverBody.h" />
@@ -631,6 +640,7 @@
     <ClInclude Include="src\bullet\src\BulletSoftBody\btSoftRigidCollisionAlgorithm.h" />
     <ClInclude Include="src\bullet\src\BulletSoftBody\btSoftRigidDynamicsWorld.h" />
     <ClInclude Include="src\bullet\src\BulletSoftBody\btSoftSoftCollisionAlgorithm.h" />
+    <ClInclude Include="src\bullet\src\BulletSoftBody\poly34.h" />
     <ClInclude Include="src\bullet\src\LinearMath\btAabbUtil2.h" />
     <ClInclude Include="src\bullet\src\LinearMath\btAlignedAllocator.h" />
     <ClInclude Include="src\bullet\src\LinearMath\btAlignedObjectArray.h" />

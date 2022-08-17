@@ -469,7 +469,24 @@
     <ClCompile Include="src\bullet\src\BulletSoftBody\btSoftSoftCollisionAlgorithm.cpp">
       <Filter>Bullet\softbody</Filter>
     </ClCompile>
-    <ClCompile Include="src\bullet.cpp" />
+    <ClCompile Include="src\bullet\src\BulletCollision\CollisionShapes\btSdfCollisionShape.cpp">
+      <Filter>Bullet\collision</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bullet.cpp">
+      <Filter>Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bullet\src\BulletSoftBody\poly34.cpp">
+      <Filter>Bullet\softbody</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bullet\src\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolverMt.cpp">
+      <Filter>Bullet\dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bullet\src\BulletDynamics\ConstraintSolver\btBatchedConstraints.cpp">
+      <Filter>Bullet\dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bullet\src\BulletCollision\CollisionShapes\btMiniSDF.cpp">
+      <Filter>Bullet\dynamics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Bullet">
@@ -495,12 +512,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\bullet\src\btBulletCollisionCommon.h">
-      <Filter>Bullet</Filter>
-    </ClInclude>
-    <ClInclude Include="src\bullet\src\btBulletDynamicsCommon.h">
-      <Filter>Bullet</Filter>
-    </ClInclude>
     <ClInclude Include="src\bullet\src\Bullet3Common\b3AlignedAllocator.h">
       <Filter>Bullet\common</Filter>
     </ClInclude>
@@ -1262,6 +1273,27 @@
     </ClInclude>
     <ClInclude Include="src\bullet\src\BulletSoftBody\btSoftSoftCollisionAlgorithm.h">
       <Filter>Bullet\softbody</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bullet\src\BulletCollision\CollisionShapes\btSdfCollisionShape.h">
+      <Filter>Bullet\collision</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bullet\src\btBulletDynamicsCommon.h">
+      <Filter>Bullet\collision</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bullet\src\btBulletCollisionCommon.h">
+      <Filter>Bullet\collision</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bullet\src\BulletSoftBody\poly34.h">
+      <Filter>Bullet\softbody</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bullet\src\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolverMt.h">
+      <Filter>Bullet\dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bullet\src\BulletDynamics\ConstraintSolver\btBatchedConstraints.h">
+      <Filter>Bullet\dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bullet\src\BulletCollision\CollisionShapes\btMiniSDF.h">
+      <Filter>Bullet\dynamics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

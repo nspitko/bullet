@@ -8,3 +8,6 @@ x64
 /src/bullet.cpp
 *.opendb
 *.user
+*.ipch
+.vs
+*.bat
