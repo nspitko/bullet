@@ -417,7 +417,7 @@ interface btPersistentManifold {
 
 interface btDispatcher {
 	long getNumManifolds();
-	btPersistentManifold getManifoldByIndexInternal(long index);
+	[Const] btPersistentManifold getManifoldByIndexInternal(long index);
 };
 
 interface btCollisionDispatcher {
