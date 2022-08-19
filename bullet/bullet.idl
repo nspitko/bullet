@@ -109,7 +109,7 @@ interface btCollisionObject {
 	boolean isStaticOrKinematicObject();
 	boolean hasContactResponse();
 	void setCollisionShape(btCollisionShape collisionShape);
-	btCollisionShape getCollisionShape();
+	[Const] btCollisionShape getCollisionShape();
 	void setIgnoreCollisionCheck([Const] btCollisionObject co, boolean ignoreCollisionCheck);
 	boolean checkCollideWithOverride([Const] btCollisionObject co);
 	long getActivationState();
@@ -254,6 +254,7 @@ interface btCollisionShape {
 	void calculateLocalInertia(float mass, [Ref] btVector3 inertia);
 	void setMargin(float margin);
 	float getMargin();
+	void getAabb([Ref] btTransform t, [Ref] btVector3 aabbMin, [Ref] btVector3 aabbMax);
 };
 
 interface btConvexShape {
