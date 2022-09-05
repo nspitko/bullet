@@ -1,0 +1,6 @@
+
+-lib webidl
+-cp sample/
+-main Main
+-hl dummy.hl
+

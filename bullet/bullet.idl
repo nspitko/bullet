@@ -182,6 +182,7 @@ interface RayResultCallback {
 	boolean hasHit();
 	attribute short m_collisionFilterGroup;
 	attribute short m_collisionFilterMask;
+	[Value] attribute float m_closestHitFraction;
 	[Const] attribute btCollisionObject m_collisionObject;
 };
 
@@ -246,6 +247,7 @@ interface ClosestConvexResultCallback {
 	[Value] attribute btVector3 m_convexToWorld;
 	[Value] attribute btVector3 m_hitNormalWorld;
 	[Value] attribute btVector3 m_hitPointWorld;
+	[Const] attribute btCollisionObject m_collisionObject;
 };
 ClosestConvexResultCallback implements ConvexResultCallback;
 
