@@ -23,7 +23,7 @@ class Generator {
 
 ";
 
-	static var options = { idlFile : "bullet/bullet.idl", nativeLib : "bullet", outputDir : "src", includeCode : INCLUDE, autoGC : true };
+	static var options = { idlFile : "bullet/bullet.idl", nativeLib : "bullet", outputDir : ".", includeCode : INCLUDE, autoGC : false };
 
 	public static function generateCpp() {
 		webidl.Generate.generateCpp(options);
@@ -44,9 +44,9 @@ class Generator {
 
 	public static function generateJs() {
 		// ammo.js params
-		var debug = false;
-		var defines = debug ? [] : ["NO_EXIT_RUNTIME=1", "NO_FILESYSTEM=1", "AGGRESSIVE_VARIABLE_ELIMINATION=1", "ELIMINATE_DUPLICATE_FUNCTIONS=1", "NO_DYNAMIC_EXECUTION=1"];
-		var params = ["-O"+(debug?0:3), "--llvm-lto", "1", "-I", "../../include/bullet/src"];
+		var debug = true;
+		var defines = debug ? [] : ["NO_EXIT_RUNTIME=1", "LEGACY_VM_SUPPORT=1", "BINARYEN_IGNORE_IMPLICIT_TRAPS=1", "ALLOW_MEMORY_GROWTH=1", "NO_FILESYSTEM=1", "AGGRESSIVE_VARIABLE_ELIMINATION=1", "ELIMINATE_DUPLICATE_FUNCTIONS=1", "NO_DYNAMIC_EXECUTION=1"];
+		var params = ["-O"+(debug?0:3), "--llvm-lto", "1", "-I", "src/bullet/src", "-Wno-unused-command-line-argument", "-g3", "-gsource-map" ];
 		for( d in defines ) {
 			params.push("-s");
 			params.push(d);
