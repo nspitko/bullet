@@ -1,7 +1,6 @@
 package bullet;
 
-@:enum
-abstract CollisionFlags(Int) from Int to Int
+enum abstract CollisionFlags(Int) from Int to Int
 {
 	public var CF_DYNAMIC_OBJECT = 0;
 	public var CF_STATIC_OBJECT = 1;
@@ -17,8 +16,7 @@ abstract CollisionFlags(Int) from Int to Int
 	public var CF_HAS_COLLISION_SOUND_TRIGGER = 1024;
 }
 
-@:enum
-abstract CollisionObjectTypes(Int) from Int to Int
+enum abstract CollisionObjectTypes(Int) from Int to Int
 {
 	public var CO_COLLISION_OBJECT = 1;
 	public var CO_RIGID_BODY = 2;
@@ -31,8 +29,7 @@ abstract CollisionObjectTypes(Int) from Int to Int
 	public var CO_FEATHERSTONE_LINK = 64;
 }
 
-@:enum
-abstract AnisotropicFrictionFlags(Int) from Int to Int
+enum abstract AnisotropicFrictionFlags(Int) from Int to Int
 {
 	public var CF_ANISOTROPIC_FRICTION_DISABLED = 0;
 	public var CF_ANISOTROPIC_FRICTION = 1;
